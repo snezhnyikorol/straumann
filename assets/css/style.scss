@@ -71,6 +71,7 @@ section {
   z-index: 1;
   align-items: center;
   display: flex;
+  padding-right: 20px;
 }
 
 .inverse {
@@ -85,10 +86,10 @@ section {
 
 #navigation {
   position: fixed;
-  right: 40px;
+  right: 30px;
   display: flex;
   flex-direction: column;
-  z-index: 100;
+  z-index: 10;
 
   .dot-container {
     display: flex;
@@ -116,6 +117,7 @@ section {
     .dot-text {
       margin-right: 20px;
       opacity: 0;
+      transition: opacity 300ms ease-in-out;
       color: #8FB91C;
     }
 
@@ -123,6 +125,7 @@ section {
       width: 10px;
       height: 10px;
       background: #636363;
+      transition: background-color 300ms ease-in-out;
     }
   }
 }
@@ -135,7 +138,6 @@ section {
 .content {
   display: flex;
   justify-content: space-between;
-  margin: 0 -20px;
 }
 
 .video-poster {
@@ -156,7 +158,6 @@ section {
 
 .col {
   width: 100%;
-  margin: 0 20px;
   display: flex;
   flex-direction: column;
 
@@ -167,6 +168,10 @@ section {
   .video-poster {
     width: 100%;
   }
+
+  &:nth-child(2) {
+    margin: 0 40px;
+  }
 }
 
 #video-modal {
@@ -175,7 +180,7 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 200;
   justify-content: center;
   align-items: center;
   display: none;
@@ -359,12 +364,8 @@ section {
     left: 37%
   }
 
-  .col {
-    margin: 0 80px;
-  }
-
-  .content {
-    margin: 0 -80px;
+  .col:nth-child(2) {
+    margin: 0 0 0 160px;
   }
 
   p + p {

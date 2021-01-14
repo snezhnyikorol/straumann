@@ -69,6 +69,7 @@ section {
   z-index: 1;
   align-items: center;
   display: flex;
+  padding-right: 20px;
 }
 
 .inverse {
@@ -82,10 +83,10 @@ section {
 
 #navigation {
   position: fixed;
-  right: 40px;
+  right: 30px;
   display: flex;
   flex-direction: column;
-  z-index: 100;
+  z-index: 10;
 }
 #navigation .dot-container {
   display: flex;
@@ -106,12 +107,14 @@ section {
 #navigation .dot-container .dot-text {
   margin-right: 20px;
   opacity: 0;
+  transition: opacity 300ms ease-in-out;
   color: #8FB91C;
 }
 #navigation .dot-container .dot {
   width: 10px;
   height: 10px;
   background: #636363;
+  transition: background-color 300ms ease-in-out;
 }
 
 .substrate {
@@ -122,7 +125,6 @@ section {
 .content {
   display: flex;
   justify-content: space-between;
-  margin: 0 -20px;
 }
 
 .video-poster {
@@ -143,7 +145,6 @@ section {
 
 .col {
   width: 100%;
-  margin: 0 20px;
   display: flex;
   flex-direction: column;
 }
@@ -153,6 +154,9 @@ section {
 .col .video-poster {
   width: 100%;
 }
+.col:nth-child(2) {
+  margin: 0 40px;
+}
 
 #video-modal {
   width: 100%;
@@ -160,7 +164,7 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 200;
   justify-content: center;
   align-items: center;
   display: none;
@@ -319,11 +323,8 @@ section {
   top: 29%;
   left: 37%;
 }
-#absent .col {
-  margin: 0 80px;
-}
-#absent .content {
-  margin: 0 -80px;
+#absent .col:nth-child(2) {
+  margin: 0 0 0 160px;
 }
 #absent p + p {
   margin: 30px 0;
