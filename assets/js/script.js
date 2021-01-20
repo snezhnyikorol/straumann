@@ -55,16 +55,20 @@ function handleWheel(event) {
         if (event.deltaY > 0) {
             if (current < sections.length - 1) {
                 navigation.children[current].classList.remove('active');
+                sections[current].classList.remove('active');
                 current++;
                 document.body.style.top = -sections[current].offsetTop + 'px';
                 navigation.children[current].classList.add('active');
+                sections[current].classList.add('active');
             }
         } else {
             if (current > 0) {
                 navigation.children[current].classList.remove('active');
+                sections[current].classList.remove('active');
                 current--;
                 document.body.style.top = -sections[current].offsetTop + 'px';
                 navigation.children[current].classList.add('active');
+                sections[current].classList.add('active');
             }
         }
         lastAnimation = timeNow;
@@ -75,10 +79,12 @@ function handleDotClick(event) {
     event.preventDefault();
     for (let i = 0; i < navigation.childElementCount; i++) {
         navigation.children[i].classList.remove('active');
+        sections[i].classList.remove('active');
     }
     let index = event.currentTarget.dataset.index;
     document.body.style.top = -sections[index].offsetTop + 'px';
     event.currentTarget.classList.add('active');
     current = index;
+    sections[current].classList.add('active');
 }
 

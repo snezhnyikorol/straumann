@@ -157,6 +157,28 @@ section {
 .col:nth-child(2) {
   margin: 0 40px;
 }
+.col:nth-child(1) {
+  opacity: 0;
+  transition: opacity 600ms ease-in-out 600ms;
+}
+.col:nth-child(2) {
+  opacity: 0;
+  transition: opacity 600ms ease-in-out 750ms;
+}
+.col:nth-child(3) {
+  opacity: 0;
+  transition: opacity 600ms ease-in-out 900ms;
+}
+
+.active .col:nth-child(1) {
+  opacity: 1;
+}
+.active .col:nth-child(2) {
+  opacity: 1;
+}
+.active .col:nth-child(3) {
+  opacity: 1;
+}
 
 #video-modal {
   width: 100%;
@@ -253,15 +275,18 @@ section {
   max-width: 360px;
 }
 
+#why .content {
+  align-items: flex-start;
+}
 #why h3 {
-  padding: 50px 30px;
+  padding: 30px 30px;
 }
 #why ul {
   padding-left: 30px;
   list-style: none;
 }
 #why li {
-  margin-top: 40px;
+  margin-top: 30px;
   line-height: 150%;
   position: relative;
 }
